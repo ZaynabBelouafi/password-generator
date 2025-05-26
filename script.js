@@ -16,7 +16,7 @@ function getRandomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-// adding a all functions into a object called randomFunc
+
 const randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
@@ -39,14 +39,12 @@ generate.addEventListener("click", () => {
     hasSymbol,
     length
   );
-  // console.log(hasLower, hasUpper, hasNumber, hasSymbol);
 });
 
-// function for generating random password
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = "";
     const typesCount = lower + upper + number + symbol;
-    // filter out unchecked types
+   
     const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
       (item) => Object.values(item)[0]
     );
